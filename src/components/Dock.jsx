@@ -38,13 +38,14 @@ const Dock = () => {
             animateIcons(e.clientX - left);
         }
 
-        const resetIcons = () => icons.forEach((icon) =>
-            gsap.to(icon, {
+        const resetIcons = () => icons.forEach((icon) => {
+            +            gsap.to(icon, {
                 scale: 1,
                 y: 0,
                 duration: 0.3,
                 ease: 'power1.out',
-            }))
+            })
+        })
 
         dock.addEventListener('mousemove', handleMouseMove)
         dock.addEventListener('mouseleave', resetIcons)
@@ -55,7 +56,9 @@ const Dock = () => {
         }
     })
 
-    const toggleApp = (app) => { }
+    const toggleApp = (app) => {
+        // TODO Implement Open Window logic
+    }
     return (
         <section id="dock">
             <div ref={dockRef} className='dock-container'>
@@ -65,9 +68,9 @@ const Dock = () => {
                             type='button'
                             className='dock-icon'
                             aria-label={name}
-                            data-tooltip='dock-tooltip'
+                            data-tooltip-id='dock-tooltip'
                             data-tooltip-content={name}
-                            data-tootip-delay-show={150}
+                            data-tooltip-delay-show={150}
                             disabled={!canOpen}
                             onClick={() => toggleApp({ id, canOpen })}
                         >
