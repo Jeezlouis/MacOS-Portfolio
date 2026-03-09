@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { WindowContorls } from "#components"
 import WindowWrapper from "#hoc/WindowWrapper"
 import { Download } from "lucide-react"
@@ -11,6 +12,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 
 const Resume = () => {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const onDocumentLoadSuccess = () => {
+    setLoading(false);
+  };
+
+  const onDocumentLoadError = (err) => {
+    setLoading(false);
+    setError(err.message);
+  };
+
   return (
     <>
       <div id="window-header">
@@ -18,7 +31,7 @@ const Resume = () => {
         <h2>Resume.pdf</h2>
 
         <a
-          href="files/resume.pdf"
+          href="/files/resume.pdf"
           download
           className="cursor-pointer"
           title="Download resume"
@@ -27,13 +40,29 @@ const Resume = () => {
         </a>
       </div>
 
-      <Document file="files/resume.pdf">
-        <Page
-          pageNumber={1}
-          renderTextLayer
-          renderAnnotationLayer
-        />
-      </Document>
+      <div className="relative min-h-[500px] min-w-[400px]">
+        {loading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white z-10">
+            <p className="text-gray-500">Loading PDF...</p>
+          </div>
+        )}
+        {error && (
+          <div className="absolute inset-0 flex items-center justify-center bg-white z-10 p-4">
+            <p className="text-red-500 text-center">Failed to load PDF: {error}</p>
+          </div>
+        )}
+        <Document
+          file="/files/resume.pdf"
+          onLoadSuccess={onDocumentLoadSuccess}
+          onLoadError={onDocumentLoadError}
+        >
+          <Page
+            pageNumber={1}
+            renderTextLayer
+            renderAnnotationLayer
+          />
+        </Document>
+      </div>
     </>
   )
 }
