@@ -105,20 +105,20 @@ const techStack = [
         items: ["React.js", "Next.js", "TypeScript"],
     },
     {
-        category: "Mobile",
-        items: ["React Native", "Expo"],
-    },
-    {
         category: "Styling",
         items: ["Tailwind CSS", "Sass", "CSS"],
     },
     {
         category: "Backend",
-        items: ["Node.js", "Express", "NestJS", "Hono"],
+        items: ["Python", "FastAPI", "Django"],
     },
     {
         category: "Database",
-        items: ["MongoDB", "PostgreSQL"],
+        items: ["MongoDB", "PostgreSQL", "MySQL"],
+    },
+    {
+        category: "AI Agents",
+        items: ["Python", "Langchain", "Langgraph", "DeepAgents"],
     },
     {
         category: "Dev Tools",
@@ -132,7 +132,7 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/JavaScript-Mastery-Pro",
+        link: "https://github.com/Jeezlouis",
     },
     {
         id: 2,
@@ -146,14 +146,14 @@ const socials = [
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
-        link: "https://x.com/jsmasterypro",
+        link: "https://x.com/_isreallawal",
     },
     {
         id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+        link: "https://www.linkedin.com/in/isreal-lawal-628924279/",
     },
 ];
 
