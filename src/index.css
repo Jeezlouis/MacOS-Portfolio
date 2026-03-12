@@ -389,7 +389,7 @@ html.dark body {
     }
 
     p {
-      @apply text-white
+      @apply text-white;
     }
 
     /* li backgrounds are coloured (social brand colours) — intentionally kept */
