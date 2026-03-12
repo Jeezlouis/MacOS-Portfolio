@@ -1,20 +1,23 @@
 import { WindowContorls } from "#components"
 import { socials } from "#constants"
 import WindowWrapper from "#hoc/WindowWrapper"
+import { useTheme } from "#context/ThemeContext"
 
 const Contact = () => {
+    const { theme } = useTheme();
+
     return (
         <>
-            <div className="window-header">
+            <div id="window-header">
                 <WindowContorls target="contact" />
                 <h2>Contact Me</h2>
             </div>
 
             <div className='p-5 space-y-5'>
                 <img
-                    src="/images/adrian.jpg"
+                    src="/images/isreal-profile.jpg"
                     alt="Isreal"
-                    className="w-20 rounded-full"
+                    className="w-30 h-30 rounded-full"
                 />
 
                 <h3>Let's Connect</h3>
@@ -29,8 +32,8 @@ const Contact = () => {
                 </p>
 
                 <ul>
-                    {socials.map(({ id, text, icon, bg, link }) => (
-                        <li key={id} style={{ backgroundColor: bg }}>
+                    {socials.map(({ id, text, icon, bg, darkBg, link }) => (
+                        <li key={id} style={{ backgroundColor: theme === 'dark' ? (darkBg || bg) : bg }}>
                             <a
                                 href={link}
                                 target="_blank"

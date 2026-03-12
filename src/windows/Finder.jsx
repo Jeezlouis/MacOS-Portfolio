@@ -55,6 +55,7 @@ const Finder = () => {
                 <div className="sidebar">
                     {renderList("Favorites", Object.values(locations))}
                     {renderList("Work", locations.work.children)}
+                    {renderList("Projects", locations.project.children)}
                 </div>
 
                 <ul className="content">

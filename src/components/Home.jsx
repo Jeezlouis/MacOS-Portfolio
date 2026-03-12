@@ -5,7 +5,8 @@ import { useGSAP } from "@gsap/react";
 import clsx from "clsx";
 import { Draggable } from "gsap/Draggable";
 
-const projects = locations.work?.children ?? [];
+const works = locations.work?.children ?? [];
+const projects = locations.project?.children ?? [];
 
 const Home = () => {
     const { setActiveLocation } = useLoctionStore()
@@ -22,6 +23,25 @@ const Home = () => {
 
     return (
         <section id="home">
+            <ul>
+                {works.map((work) => (
+                    <li
+                        key={work.id}
+                        className={clsx("group folder", work.windowPosition)}
+                    >
+                        <button
+                            type="button"
+                            className="flex flex-col items-center justify-center w-full h-full outline-none focus:bg-white/10 rounded-lg p-1"
+                            onClick={() => handleOpenProjectFinder(work)}
+                            aria-label={`Open ${work.name}`}
+                        >
+                            <img src="/images/folder.png" alt="" aria-hidden="true" />
+                            <p>{work.name}</p>
+                        </button>
+                    </li>
+                ))}
+            </ul>
+
             <ul>
                 {projects.map((project) => (
                     <li

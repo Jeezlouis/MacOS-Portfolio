@@ -41,7 +41,7 @@ const Terminal = () => {
                         <Check size={20} /> 6 of 6 stacks loaded successfully (100%)
                     </p>
 
-                    <p className="text-black">
+                    <p>
                         <Flag size={15} fill="black" />
                         Render time: 6ms
                     </p>
