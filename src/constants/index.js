@@ -146,7 +146,7 @@ const socials = [
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
         darkBg: "#2f9c44",
-        link: "https://jsmastery.com/",
+        link: "https://mac-os-portfolio-jade.vercel.app/",
     },
     {
         id: 3,
@@ -495,7 +495,7 @@ const ABOUT_LOCATION = {
         {
             id: 1,
             name: "me.png",
-            icon: "/images/image.png",
+            icon: "/images/isreal.png",
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
@@ -504,7 +504,7 @@ const ABOUT_LOCATION = {
         {
             id: 2,
             name: "casual-me.png",
-            icon: "/images/image.png",
+            icon: "/images/isreal-2.png",
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
@@ -513,7 +513,7 @@ const ABOUT_LOCATION = {
         {
             id: 3,
             name: "conference-me.png",
-            icon: "/images/image.png",
+            icon: "/images/isreal-3.png",
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
@@ -522,7 +522,7 @@ const ABOUT_LOCATION = {
         {
             id: 4,
             name: "about-me.txt",
-            icon: "/images/txt.png",
+            icon: "/images/isreal.png",
             kind: "file",
             fileType: "txt",
             position: "top-60 left-5",
@@ -547,7 +547,7 @@ const RESUME_LOCATION = {
     children: [
         {
             id: 1,
-            name: "Resume.pdf",
+            name: "backend.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
@@ -558,7 +558,7 @@ const RESUME_LOCATION = {
         },
         {
             id: 2,
-            name: "Resume.pdf",
+            name: "frontend.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
@@ -566,7 +566,7 @@ const RESUME_LOCATION = {
         },
         {
             id: 3,
-            name: "Resume.pdf",
+            name: "fullstack.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
@@ -574,7 +574,7 @@ const RESUME_LOCATION = {
         },
         {
             id: 4,
-            name: "Resume.pdf",
+            name: "softwate-engineer.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
