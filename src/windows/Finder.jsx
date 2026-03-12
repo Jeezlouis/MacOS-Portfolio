@@ -4,11 +4,17 @@ import WindowWrapper from "#hoc/WindowWrapper"
 import useLoctionStore from "#store/location"
 import { Search } from "lucide-react"
 import clsx from 'clsx'
+import { Draggable } from "gsap/Draggable";
+import { useGSAP } from "@gsap/react";
 import useWindowStore from "#store/window"
 
 const Finder = () => {
     const { openWindow } = useWindowStore()
     const { activeLocation, setActiveLocation } = useLoctionStore()
+
+    useGSAP(() => {
+        Draggable.create(".finder-item")
+    }, { dependencies: [activeLocation], revertOnUpdate: true })
 
     const openItem = (item) => {
         if (item.fileType === 'pdf') return openWindow("resume", item)
@@ -65,7 +71,7 @@ const Finder = () => {
                     {activeLocation?.children?.map((item) => (
                         <li
                             key={item.id}
-                            className={item.position}
+                            className={clsx("finder-item", item.windowPosition || item.position)}
                             onClick={() => openItem(item)}
                         >
                             <img src={item.icon} alt={item.name} />

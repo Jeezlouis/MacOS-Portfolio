@@ -242,7 +242,7 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "AskLumen Project.txt",
+                    name: "AskLumen Experience.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
@@ -295,7 +295,7 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "MyEasyLearn Project.txt",
+                    name: "MyEasyLearn Experience.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
@@ -352,8 +352,8 @@ const PROJECT_LOCATION = {
             name: "AI Resume Analyzer",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-20 left-90",
-            windowPosition: "top-[5vh] right-[30vw]",
+            position: "top-30 left-90",
+            windowPosition: "top-[30vh] right-[30vw]",
             children: [
                 {
                     id: 1,
@@ -388,7 +388,7 @@ const PROJECT_LOCATION = {
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-12 right-30",
-            windowPosition: "top-[70vh] right-72",
+            windowPosition: "top-[70vh] left-[10vw]",
             children: [
                 {
                     id: 1,
@@ -410,7 +410,7 @@ const PROJECT_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://sass-app-alpha.vercel.app/",
-                    position: "top-10 right-20",
+                    position: "top-10 left-20",
                 },
             ],
         },
@@ -478,7 +478,7 @@ const PROJECT_LOCATION = {
                     kind: "file",
                     fileType: "url",
                     href: "https://dev-events-kappa.vercel.app/",
-                    position: "top-10 right-20",
+                    position: "top-10 left-20",
                 },
             ],
         },
@@ -495,7 +495,7 @@ const ABOUT_LOCATION = {
         {
             id: 1,
             name: "me.png",
-            icon: "/images/isreal.png",
+            icon: "/images/isreal.jpg",
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
@@ -504,7 +504,7 @@ const ABOUT_LOCATION = {
         {
             id: 2,
             name: "casual-me.png",
-            icon: "/images/isreal-2.png",
+            icon: "/images/isreal-2.jpg",
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
@@ -513,7 +513,7 @@ const ABOUT_LOCATION = {
         {
             id: 3,
             name: "conference-me.png",
-            icon: "/images/isreal-3.png",
+            icon: "/images/isreal-3.jpg",
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
@@ -522,7 +522,7 @@ const ABOUT_LOCATION = {
         {
             id: 4,
             name: "about-me.txt",
-            icon: "/images/isreal.png",
+            icon: "/images/txt.png",
             kind: "file",
             fileType: "txt",
             position: "top-60 left-5",
