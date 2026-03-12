@@ -10,9 +10,9 @@ const Image = () => {
 
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target="imgfile" />
-                <p>{data.name}</p>
+                <p>{data?.name}</p>
             </div>
 
             <div className='preview'>

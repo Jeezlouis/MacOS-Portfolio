@@ -1,4 +1,4 @@
-import { dockApps } from '#constants'
+import { dockApps, locations } from '#constants'
 import { useGSAP } from '@gsap/react'
 import { useRef } from 'react'
 import { Tooltip } from 'react-tooltip'
@@ -60,6 +60,12 @@ const Dock = () => {
 
     const toggleApp = (app) => {
         if (!app.canOpen) return;
+
+        // If it's a location (like trash), we always just open/focus it
+        if (locations[app.id]) {
+            openWindow(app.id);
+            return;
+        }
 
         const win = windows[app.id];
         if (!win) return;

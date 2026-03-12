@@ -2,7 +2,12 @@ const navLinks = [
     {
         id: 1,
         name: "Projects",
-        type: "finder",
+        type: "project",
+    },
+    {
+        id: 2,
+        name: "Works",
+        type: "work",
     },
     {
         id: 3,
@@ -70,33 +75,33 @@ const dockApps = [
         id: "trash",
         name: "Archive", // was "Trash"
         icon: "trash.png",
-        canOpen: false,
+        canOpen: true,
     },
 ];
 
 const blogPosts = [
     {
         id: 1,
-        date: "Sep 2, 2025",
+        date: "Mar 11, 2026",
         title:
-            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+            "What It Takes To Build And Deploy A Real AI Product For A Client",
         image: "/images/blog1.png",
-        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+        link: "https://medium.com/@bobzy005/what-it-takes-to-build-and-deploy-a-real-ai-product-for-a-client-cef3ca754bb8",
     },
-    {
-        id: 2,
-        date: "Aug 28, 2025",
-        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-        image: "/images/blog2.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-    },
-    {
-        id: 3,
-        date: "Aug 15, 2025",
-        title: "The Ultimate Guide to Mastering GSAP Animations",
-        image: "/images/blog3.png",
-        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-    },
+    // {
+    //     id: 2,
+    //     date: "Aug 28, 2025",
+    //     title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+    //     image: "/images/blog2.png",
+    //     link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    // },
+    // {
+    //     id: 3,
+    //     date: "Aug 15, 2025",
+    //     title: "The Ultimate Guide to Mastering GSAP Animations",
+    //     image: "/images/blog3.png",
+    //     link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    // },
 ];
 
 const techStack = [
@@ -132,6 +137,7 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
+        darkBg: "#b33f44",
         link: "https://github.com/Jeezlouis",
     },
     {
@@ -139,6 +145,7 @@ const socials = [
         text: "Platform",
         icon: "/icons/atom.svg",
         bg: "#4bcb63",
+        darkBg: "#2f9c44",
         link: "https://jsmastery.com/",
     },
     {
@@ -146,6 +153,7 @@ const socials = [
         text: "Twitter/X",
         icon: "/icons/twitter.svg",
         bg: "#ff866b",
+        darkBg: "#cc523a",
         link: "https://x.com/_isreallawal",
     },
     {
@@ -153,6 +161,7 @@ const socials = [
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
+        darkBg: "#037ea8",
         link: "https://www.linkedin.com/in/isreal-lawal-628924279/",
     },
 ];
@@ -222,67 +231,129 @@ const WORK_LOCATION = {
     icon: "/icons/work.svg",
     kind: "folder",
     children: [
-        // ▶ Project 1
+        // ▶ Work 1
         {
-            id: 5,
-            name: "Nike Ecommerce Website Application",
+            id: 6,
+            name: "AskLumen AI Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-5", // icon position inside Finder
-            windowPosition: "top-[15vh] right-[50px]", // optional: Finder window position
+            position: "top-10 left-5",
+            windowPosition: "top-[15vh] right-[50px]",
             children: [
                 {
                     id: 1,
-                    name: "Nike Project.txt",
+                    name: "AskLumen Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
+                        "AskLumen AI is an AI-powered learning platform designed to help students study smarter with conversational AI tools.",
+                        "I worked on building the frontend experience using React, Vite, and Tailwind CSS, focusing on fast performance and responsive design.",
+                        "The platform includes AI chat, voice interactions, and interactive learning tools that make studying more engaging.",
+                        "I also integrated tools like Cloudinary for media management and Sentry for monitoring frontend errors and improving reliability.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "nike.com",
-                    icon: "/images/safari.png",
+                    name: "asklumenai.com",
+                    icon: "/images/lumenlogo.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
+                    href: "https://asklumenai.com",
                     position: "top-10 right-20",
                 },
                 {
-                    id: 4,
-                    name: "nike.png",
-                    icon: "/images/image.png",
+                    id: 3,
+                    name: "asklumen.png",
+                    icon: "/images/asklumen.png",
                     kind: "file",
                     fileType: "img",
                     position: "top-52 right-80",
-                    imageUrl: "/images/project-1.png",
+                    imageUrl: "/images/asklumen.png",
                 },
                 {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
+                    id: 4,
+                    name: "Architectural Diagram",
+                    icon: "/images/archi-asklumen.png",
                     kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
+                    fileType: "img",
                     position: "top-60 right-20",
+                    imageUrl: "/images/archi-asklumen.png",
                 },
             ],
         },
 
-        // ▶ Project 2
+        // ▶ Work 2
         {
-            id: 6,
+            id: 7,
+            name: "MyEasyLearn AI Platform",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-52 right-90",
+            windowPosition: "top-[50vh] left-[17px]",
+            children: [
+                {
+                    id: 1,
+                    name: "MyEasyLearn Project.txt",
+                    icon: "/images/txt.png",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-5 right-10",
+                    description: [
+                        "MyEasyLearn is an AI-driven learning platform built to help users interact with educational content through conversational AI.",
+                        "I worked on developing responsive frontend components using React, focusing on creating smooth AI chat interactions.",
+                        "The project involved integrating backend APIs for real-time responses and handling media uploads using Cloudinary.",
+                        "I also worked on improving UI performance and making sure the platform worked smoothly across different screen sizes.",
+                    ],
+                },
+                {
+                    id: 2,
+                    name: "myeasylearn.com",
+                    icon: "/images/myeasylearn.png",
+                    kind: "file",
+                    fileType: "url",
+                    href: "https://myeasylearn.com",
+                    position: "top-20 left-20",
+                },
+                {
+                    id: 3,
+                    name: "myeasylearn.png",
+                    icon: "/images/easylearn.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-52 left-80",
+                    imageUrl: "/images/easylearn.png",
+                },
+                {
+                    id: 4,
+                    name: "Architectural Diagram",
+                    icon: "/images/archi-easy.png",
+                    kind: "file",
+                    fileType: "img",
+                    position: "top-60 left-5",
+                    imageUrl: "/images/archi-easy.png",
+                },
+            ],
+        },
+    ],
+};
+
+const PROJECT_LOCATION = {
+    id: 2,
+    type: "project",
+    name: "Projects",
+    icon: "/icons/project.svg",
+    kind: "folder",
+    children: [
+        // ▶ Project 1
+        {
+            id: 8,
             name: "AI Resume Analyzer",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-80",
-            windowPosition: "top-[50vh] left-[17px]",
+            position: "top-20 left-90",
+            windowPosition: "top-[5vh] right-[30vw]",
             children: [
                 {
                     id: 1,
@@ -290,93 +361,106 @@ const WORK_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 right-10",
+                    position: "top-5 left-10",
                     description: [
-                        "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
-                        "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
-                        "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
-                        "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
+                        "Built an AI-powered web application that analyzes resumes and suggests improvements.",
+                        "Integrated LLM-based feedback generation to provide tailored career recommendations.",
+                        "Implemented React Router v7 for smooth navigation and application state management.",
+                        "Designed the interface to deliver actionable feedback to improve job match success.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "ai-resume-analyzer.com",
-                    icon: "/images/safari.png",
+                    name: "ai-resume-analyzer-nu-coral.vercel.app",
+                    icon: "/images/ResumeAnalyzer.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-                    position: "top-20 left-20",
+                    href: "https://ai-resume-analyzer-nu-coral.vercel.app/",
+                    position: "top-10 right-20",
                 },
+            ],
+        },
+
+        // ▶ Project 2
+        {
+            id: 9,
+            name: "AI Learning Assistant",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-12 right-30",
+            windowPosition: "top-[70vh] right-72",
+            children: [
                 {
-                    id: 4,
-                    name: "ai-resume-analyzer.png",
-                    icon: "/images/image.png",
+                    id: 1,
+                    name: "AI Learning Assistant Project.txt",
+                    icon: "/images/txt.png",
                     kind: "file",
-                    fileType: "img",
-                    position: "top-52 left-80",
-                    imageUrl: "/images/project-2.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 left-5",
+                    fileType: "txt",
+                    position: "top-5 right-10",
+                    description: [
+                        "Developed an AI-powered learning interface designed to assist students with questions and explanations.",
+                        "Built conversational UI components to simulate real-time interaction with AI tutors.",
+                        "Focused on clean UI design and responsive layouts using React and Tailwind CSS.",
+                    ],
                 },
             ],
         },
 
         // ▶ Project 3
         {
-            id: 7,
-            name: "Food Delivery App",
+            id: 10,
+            name: "Zentry Website Redesign",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-80",
-            windowPosition: "top-[15vh] left-[90px]",
+            position: "top-90 left-20",
+            windowPosition: "top-10 left-10",
             children: [
                 {
                     id: 1,
-                    name: "Food Delivery App Project.txt",
+                    name: "Zentry Website Redesign Project.txt",
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-5 left-5",
                     description: [
-                        "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-                        "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-                        "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-                        "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+                        "Recreated and redesigned the award-winning Zentry website with modern UI and animation techniques.",
+                        "Implemented interactive animations using GSAP, Tailwind v4, and Aceternity UI.",
+                        "Focused on smooth transitions, scroll-based animations, and immersive user experience.",
                     ],
                 },
                 {
                     id: 2,
-                    name: "food-delivery-app.com",
-                    icon: "/images/safari.png",
+                    name: "mini-zentry-design.vercel.app",
+                    icon: "/images/zentry.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
+                    href: "https://mini-zentry-design.vercel.app",
                     position: "top-10 right-20",
                 },
+            ],
+        },
+
+        // ▶ Project 4
+        {
+            id: 11,
+            name: "Dev Events Platform",
+            icon: "/images/folder.png",
+            kind: "folder",
+            position: "top-70 right-20",
+            windowPosition: "top-[20vh] left-90",
+            children: [
                 {
-                    id: 4,
-                    name: "food-delivery-app.png",
-                    icon: "/images/image.png",
+                    id: 1,
+                    name: "Dev Events Platform Project.txt",
+                    icon: "/images/txt.png",
                     kind: "file",
-                    fileType: "img",
-                    position: "top-52 right-80",
-                    imageUrl: "/images/project-3.png",
-                },
-                {
-                    id: 5,
-                    name: "Design.fig",
-                    icon: "/images/plain.png",
-                    kind: "file",
-                    fileType: "fig",
-                    href: "https://google.com",
-                    position: "top-60 right-20",
+                    fileType: "txt",
+                    position: "top-20 right-10",
+                    description: [
+                        "Built a web platform for discovering and sharing developer events.",
+                        "Designed event listings, filtering, and UI components to improve discoverability of tech events.",
+                        "Focused on responsive UI and clean user flows for event browsing.",
+                    ],
                 },
             ],
         },
@@ -384,7 +468,7 @@ const WORK_LOCATION = {
 };
 
 const ABOUT_LOCATION = {
-    id: 2,
+    id: 3,
     type: "about",
     name: "About me",
     icon: "/icons/info.svg",
@@ -397,7 +481,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-10 left-5",
-            imageUrl: "/images/adrian.jpg",
+            imageUrl: "/images/isreal.jpg",
         },
         {
             id: 2,
@@ -406,7 +490,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-28 right-72",
-            imageUrl: "/images/adrian-2.jpg",
+            imageUrl: "/images/isreal-2.jpg",
         },
         {
             id: 3,
@@ -415,7 +499,7 @@ const ABOUT_LOCATION = {
             kind: "file",
             fileType: "img",
             position: "top-52 left-80",
-            imageUrl: "/images/adrian-3.jpeg",
+            imageUrl: "/images/isreal-3.jpeg",
         },
         {
             id: 4,
@@ -425,7 +509,7 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/adrian.jpg",
+            image: "/images/isreal.jpg",
             description: [
                 "Hey! I’m Isreal 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
                 "I specialize in Python, JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
@@ -437,7 +521,7 @@ const ABOUT_LOCATION = {
 };
 
 const RESUME_LOCATION = {
-    id: 3,
+    id: 4,
     type: "resume",
     name: "Resume",
     icon: "/icons/file.svg",
@@ -449,14 +533,40 @@ const RESUME_LOCATION = {
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
+            position: "top-10 left-5",
+
             // you can add `href` if you want to open a hosted resume
             // href: "/your/resume/path.pdf",
+        },
+        {
+            id: 2,
+            name: "Resume.pdf",
+            icon: "/images/pdf.png",
+            kind: "file",
+            fileType: "pdf",
+            position: "top-34 right-62",
+        },
+        {
+            id: 3,
+            name: "Resume.pdf",
+            icon: "/images/pdf.png",
+            kind: "file",
+            fileType: "pdf",
+            position: "top-62 right-20",
+        },
+        {
+            id: 4,
+            name: "Resume.pdf",
+            icon: "/images/pdf.png",
+            kind: "file",
+            fileType: "pdf",
+            position: "top-82 right-90",
         },
     ],
 };
 
 const TRASH_LOCATION = {
-    id: 4,
+    id: 5,
     type: "trash",
     name: "Trash",
     icon: "/icons/trash.svg",
@@ -485,6 +595,7 @@ const TRASH_LOCATION = {
 
 export const locations = {
     work: WORK_LOCATION,
+    project: PROJECT_LOCATION,
     about: ABOUT_LOCATION,
     resume: RESUME_LOCATION,
     trash: TRASH_LOCATION,

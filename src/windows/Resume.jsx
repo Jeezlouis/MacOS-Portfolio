@@ -26,7 +26,7 @@ const Resume = () => {
 
   return (
     <>
-      <div id="window-header">
+      <div className="window-header">
         <WindowContorls target="resume" />
         <h2>Resume.pdf</h2>
 

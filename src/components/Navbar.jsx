@@ -2,14 +2,16 @@ import dayjs from "dayjs";
 
 import { navIcons, navLinks } from "#constants"
 import useWindowStore from "#store/window"
+import { useTheme } from "#context/ThemeContext"
 
 const Navbar = () => {
     const { openWindow } = useWindowStore()
+    const { theme, toggleTheme } = useTheme()
 
     return (
         <nav>
             <div>
-                <img src="/images/logo.svg" alt='logo' />
+                <img src={theme === "dark" ? "/images/logo.png" : "/images/logo.svg"} alt='logo' />
                 <p className='font-bold'>Isreal's Portfolio</p>
 
                 <ul>
@@ -32,10 +34,28 @@ const Navbar = () => {
                 <ul>
                     {navIcons.map(({ id, img }) => (
                         <li key={id}>
-                            <img src={img} className="icon-hover" alt={`icon-${id}`} />
+                            <img
+                                src={img}
+                                className={`icon-hover ${theme === "dark" ? "invert" : ""}`}
+                                alt={`icon-${id}`}
+                            />
                         </li>
                     ))}
                 </ul>
+
+                <button 
+                    type="button" 
+                    onClick={toggleTheme} 
+                    className="cursor-pointer"
+                    aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+                    aria-pressed={theme === "dark"}
+                >
+                    <img
+                        src={`/icons/${theme === "dark" ? "moon" : "dark-sun"}.svg`}
+                        alt="theme"
+                        className="icon-hover"
+                    />
+                </button>
 
                 <time>{dayjs().format("ddd MMM D h:mm A")}</time>
             </div>

@@ -9,7 +9,7 @@ const Photos = () => {
 
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target='photos' />
 
                 <div className="w-full flex justify-end items-center gap-3 text-gray-500">
