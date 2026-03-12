@@ -27,7 +27,7 @@ const Home = () => {
                 {works.map((work) => (
                     <li
                         key={work.id}
-                        className={clsx("group folder", work.windowPosition)}
+                        className={clsx("group folder", work.position)}
                     >
                         <button
                             type="button"
@@ -46,7 +46,7 @@ const Home = () => {
                 {projects.map((project) => (
                     <li
                         key={project.id}
-                        className={clsx("group folder", project.windowPosition)}
+                        className={clsx("group folder", project.position)}
                     >
                         <button
                             type="button"

@@ -8,7 +8,7 @@ const Contact = () => {
 
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target="contact" />
                 <h2>Contact Me</h2>
             </div>

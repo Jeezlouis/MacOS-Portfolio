@@ -15,8 +15,11 @@ const Finder = () => {
         if (item.fileType === 'txt') return openWindow("txtfile", item)
         if (item.fileType === 'img') return openWindow("imgfile", item)
         if (item.kind === 'folder') return setActiveLocation(item)
-        if (['fig', 'url'].includes(item.fileType) && item.href)
-            return window.open(item.href, "_blank")
+        if (['fig', 'url'].includes(item.fileType) && item.href) {
+            const newWin = window.open(item.href, "_blank", "noopener,noreferrer");
+            if (newWin) newWin.opener = null;
+            return newWin;
+        }
 
         openWindow(`${item.fileType}${item.kind}`, item)
     }
@@ -46,7 +49,7 @@ const Finder = () => {
 
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target="finder" />
                 <Search className="icon" />
             </div>

@@ -43,7 +43,7 @@ html.dark body {
 
   nav,
   .dock-container,
-  #window-header,
+  .window-header,
   .sidebar,
   .content,
   .search,
@@ -180,11 +180,11 @@ html.dark body {
   /* traffic-light colours are identical in dark mode — no override needed */
 
   /* ── Window header ─────────────────────────────────────────────────────── */
-  #window-header {
+  .window-header {
     @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
   }
 
-  .dark #window-header {
+  .dark .window-header {
     @apply bg-[#262626] border-white/10 text-[#8E8E93];
   }
 
@@ -488,7 +488,7 @@ html.dark body {
   #resume {
     @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
-    #window-header {
+    .window-header {
       h2 {
         @apply font-bold text-sm text-center flex-1;
       }
@@ -498,7 +498,7 @@ html.dark body {
   .dark #resume {
     @apply bg-[#1E1E1E];
 
-    #window-header h2 {
+    .window-header h2 {
       @apply text-white;
     }
   }
@@ -597,7 +597,7 @@ html.dark body {
   #imgfile {
     @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
-    #window-header {
+    .window-header {
       p {
         @apply font-bold text-[#5f6266];
       }
@@ -615,7 +615,7 @@ html.dark body {
   .dark #imgfile {
     @apply bg-[#1E1E1E];
 
-    #window-header {
+    .window-header {
       p {
         @apply text-[#8E8E93];
       }

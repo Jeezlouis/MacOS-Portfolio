@@ -6,7 +6,7 @@ import { WindowContorls } from "#components";
 const Terminal = () => {
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target="terminal" />
                 <h2>Tech Stack</h2>
             </div>
@@ -42,7 +42,7 @@ const Terminal = () => {
                     </p>
 
                     <p>
-                        <Flag size={15} fill="black" />
+                        <Flag size={15} fill="currentColor" />
                         Render time: 6ms
                     </p>
                 </div>

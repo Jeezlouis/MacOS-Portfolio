@@ -290,7 +290,7 @@ const WORK_LOCATION = {
             name: "MyEasyLearn AI Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-80",
+            position: "top-52 right-90",
             windowPosition: "top-[50vh] left-[17px]",
             children: [
                 {
@@ -352,7 +352,7 @@ const PROJECT_LOCATION = {
             name: "AI Resume Analyzer",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-5",
+            position: "top-20 left-90",
             windowPosition: "top-[5vh] right-[30vw]",
             children: [
                 {
@@ -387,7 +387,7 @@ const PROJECT_LOCATION = {
             name: "AI Learning Assistant",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-32 right-40",
+            position: "top-12 right-30",
             windowPosition: "top-[70vh] right-72",
             children: [
                 {
@@ -412,7 +412,7 @@ const PROJECT_LOCATION = {
             name: "Zentry Website Redesign",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-60 left-20",
+            position: "top-90 left-20",
             windowPosition: "top-10 left-10",
             children: [
                 {
@@ -455,7 +455,7 @@ const PROJECT_LOCATION = {
                     icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 right-10",
+                    position: "top-20 right-10",
                     description: [
                         "Built a web platform for discovering and sharing developer events.",
                         "Designed event listings, filtering, and UI components to improve discoverability of tech events.",

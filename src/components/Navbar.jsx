@@ -43,7 +43,13 @@ const Navbar = () => {
                     ))}
                 </ul>
 
-                <button type="button" onClick={toggleTheme} className="cursor-pointer">
+                <button 
+                    type="button" 
+                    onClick={toggleTheme} 
+                    className="cursor-pointer"
+                    aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
+                    aria-pressed={theme === "dark"}
+                >
                     <img
                         src={`/icons/${theme === "dark" ? "moon" : "dark-sun"}.svg`}
                         alt="theme"

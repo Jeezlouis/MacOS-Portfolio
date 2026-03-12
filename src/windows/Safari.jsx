@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Copy, MoveRight, PanelLeft, Plus, Search, Sh
 
 const Safari = () => {
     return <>
-        <div id="window-header">
+        <div className="window-header">
             <WindowContorls target="safari" />
 
             <PanelLeft className="ml-10 icon" />

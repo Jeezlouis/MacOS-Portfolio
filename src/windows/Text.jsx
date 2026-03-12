@@ -10,7 +10,7 @@ const Text = () => {
 
     return (
         <>
-            <div id="window-header">
+            <div className="window-header">
                 <WindowContorls target="txtfile" />
                 <h2>{data.name}</h2>
             </div>
