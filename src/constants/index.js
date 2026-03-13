@@ -237,7 +237,7 @@ const WORK_LOCATION = {
             name: "AskLumen AI Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-10 left-5",
+            position: "top-100 left-70",
             windowPosition: "top-[15vh] right-[50px]",
             children: [
                 {
@@ -290,7 +290,7 @@ const WORK_LOCATION = {
             name: "MyEasyLearn AI Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-52 right-90",
+            position: "top-62 right-80",
             windowPosition: "top-[50vh] left-[17px]",
             children: [
                 {
@@ -387,7 +387,7 @@ const PROJECT_LOCATION = {
             name: "AI Learning Assistant",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-12 right-30",
+            position: "top-52 right-30",
             windowPosition: "top-[70vh] left-[10vw]",
             children: [
                 {
@@ -421,7 +421,7 @@ const PROJECT_LOCATION = {
             name: "Zentry Website Redesign",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-90 left-20",
+            position: "top-130 left-20",
             windowPosition: "top-10 left-10",
             children: [
                 {
@@ -455,7 +455,7 @@ const PROJECT_LOCATION = {
             name: "Dev Events Platform",
             icon: "/images/folder.png",
             kind: "folder",
-            position: "top-70 right-20",
+            position: "top-100 right-50",
             windowPosition: "top-[20vh] left-90",
             children: [
                 {
