@@ -527,7 +527,7 @@ const ABOUT_LOCATION = {
             fileType: "txt",
             position: "top-60 left-5",
             subtitle: "Meet the Developer Behind the Code",
-            image: "/images/isreal.jpg",
+            image: "/images/isreal-profile.jpg",
             description: [
                 "Hey! I’m Isreal 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
                 "I specialize in Python, JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",

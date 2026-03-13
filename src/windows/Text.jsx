@@ -15,7 +15,7 @@ const Text = () => {
                 <h2>{data.name}</h2>
             </div>
 
-            <div className='bg-white h-full p-8 overflow-y-auto text-black select-text cursor-auto min-w-[300px] max-w-[600px]'>
+            <div className='bg-white h-screen p-8 overflow-y-auto text-black select-text cursor-auto min-w-[300px] max-w-[600px]'>
                 {data.image && (
                     <img src={data.image} alt={data.name} className="w-full h-auto object-contain rounded-lg mb-6" />
                 )}
