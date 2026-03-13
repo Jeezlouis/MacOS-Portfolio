@@ -16,11 +16,11 @@ const Resume = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [numPages, setNumPages] = useState(null);
-  
+
   const { windows } = useWindowStore();
   const data = windows?.resume?.data;
-  
-  const pdfName = data?.name || "softwate-engineer.pdf";
+
+  const pdfName = data?.name || "software_engineer.pdf";
   const pdfPath = `/files/${pdfName}`;
 
   const onDocumentLoadSuccess = ({ numPages }) => {

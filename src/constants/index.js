@@ -574,7 +574,7 @@ const RESUME_LOCATION = {
         },
         {
             id: 4,
-            name: "softwate-engineer.pdf",
+            name: "software_engineer.pdf",
             icon: "/images/pdf.png",
             kind: "file",
             fileType: "pdf",
