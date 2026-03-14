@@ -27,16 +27,14 @@ const App = () => {
       <Dock />
       <Home />
 
-      <Suspense fallback={null}>
-        {windows.terminal?.isOpen && <Terminal />}
-        {windows.safari?.isOpen && <Safari />}
-        {windows.resume?.isOpen && <Resume />}
-        {windows.finder?.isOpen && <Finder />}
-        {windows.text?.isOpen && <Text />}
-        {windows.image?.isOpen && <Image />}
-        {windows.contact?.isOpen && <Contact />}
-        {windows.photos?.isOpen && <Photos />}
-      </Suspense>
+      {windows.terminal?.isOpen && <Suspense fallback={null}><Terminal /></Suspense>}
+      {windows.safari?.isOpen && <Suspense fallback={null}><Safari /></Suspense>}
+      {windows.resume?.isOpen && <Suspense fallback={null}><Resume /></Suspense>}
+      {windows.finder?.isOpen && <Suspense fallback={null}><Finder /></Suspense>}
+      {windows.text?.isOpen && <Suspense fallback={null}><Text /></Suspense>}
+      {windows.image?.isOpen && <Suspense fallback={null}><Image /></Suspense>}
+      {windows.contact?.isOpen && <Suspense fallback={null}><Contact /></Suspense>}
+      {windows.photos?.isOpen && <Suspense fallback={null}><Photos /></Suspense>}
     </main>
   )
 }
