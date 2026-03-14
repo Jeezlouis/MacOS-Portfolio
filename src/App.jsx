@@ -31,8 +31,8 @@ const App = () => {
       {windows.safari?.isOpen && <Suspense fallback={null}><Safari /></Suspense>}
       {windows.resume?.isOpen && <Suspense fallback={null}><Resume /></Suspense>}
       {windows.finder?.isOpen && <Suspense fallback={null}><Finder /></Suspense>}
-      {windows.text?.isOpen && <Suspense fallback={null}><Text /></Suspense>}
-      {windows.image?.isOpen && <Suspense fallback={null}><Image /></Suspense>}
+      {windows.txtfile?.isOpen && <Suspense fallback={null}><Text /></Suspense>}
+      {windows.imgfile?.isOpen && <Suspense fallback={null}><Image /></Suspense>}
       {windows.contact?.isOpen && <Suspense fallback={null}><Contact /></Suspense>}
       {windows.photos?.isOpen && <Suspense fallback={null}><Photos /></Suspense>}
     </main>
