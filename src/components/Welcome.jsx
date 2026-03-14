@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, memo } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
@@ -23,6 +23,20 @@ const setupTextHover = (container, type) => {
     const letters = container.querySelectorAll("span");
     const { min, max, default: base } = FONT_WEIGHTS[type];
 
+    let cachedBounds = [];
+    let containerLeft = 0;
+
+    const cachePositions = () => {
+        containerLeft = container.getBoundingClientRect().left;
+        cachedBounds = Array.from(letters).map((letter) => {
+            const lBounds = letter.getBoundingClientRect();
+            return {
+                leftRel: lBounds.left - containerLeft,
+                width: lBounds.width,
+            };
+        });
+    };
+
     const animateLetter = (letter, weight, duration = 0.25) => {
         return gsap.to(letter, {
             duration,
@@ -31,13 +45,21 @@ const setupTextHover = (container, type) => {
         });
     }
 
-    const handleMouseMove = (e) => {
-        const { left } = container.getBoundingClientRect();
-        const mouseX = e.clientX - left
+    const handleMouseEnter = () => {
+        cachePositions();
+        window.addEventListener("resize", cachePositions);
+        window.addEventListener("orientationchange", cachePositions);
+    };
 
-        letters.forEach((letter) => {
-            const { left: l, width: w } = letter.getBoundingClientRect();
-            const distance = Math.abs(mouseX - (l - left + w / 2));
+    const handleMouseMove = (e) => {
+        if (!cachedBounds.length) cachePositions(); // Fallback
+        const mouseX = e.clientX - containerLeft;
+
+        letters.forEach((letter, index) => {
+            const bounds = cachedBounds[index];
+            if (!bounds) return;
+
+            const distance = Math.abs(mouseX - (bounds.leftRel + bounds.width / 2));
             const intensity = Math.exp(-(distance ** 2) / 20000);
 
             animateLetter(letter, min + (max - min) * intensity)
@@ -45,19 +67,25 @@ const setupTextHover = (container, type) => {
     }
 
     const handleMouseLeave = () => {
-        letters.forEach((letter) => animateLetter(letter, base, 0.3))
+        window.removeEventListener("resize", cachePositions);
+        window.removeEventListener("orientationchange", cachePositions);
+        letters.forEach((letter) => animateLetter(letter, base, 0.3));
     }
 
+    container.addEventListener("mouseenter", handleMouseEnter);
     container.addEventListener("mousemove", handleMouseMove);
     container.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
+        container.removeEventListener("mouseenter", handleMouseEnter);
         container.removeEventListener("mousemove", handleMouseMove);
         container.removeEventListener("mouseleave", handleMouseLeave);
+        window.removeEventListener("resize", cachePositions);
+        window.removeEventListener("orientationchange", cachePositions);
     }
 }
 
-const Welcome = () => {
+const Welcome = memo(() => {
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
 
@@ -85,6 +113,6 @@ const Welcome = () => {
             </div>
         </section>
     )
-}
+})
 
 export default Welcome

@@ -43,6 +43,7 @@ const Finder = () => {
                         className={clsx(item.id === activeLocation.id ? 'active' : 'not-active')}
                     >
                         <img
+                            loading="lazy"
                             src={item.icon}
                             className="w-4"
                             alt={item.name}
@@ -74,7 +75,7 @@ const Finder = () => {
                             className={clsx("finder-item", item.windowPosition || item.position)}
                             onClick={() => openItem(item)}
                         >
-                            <img src={item.icon} alt={item.name} />
+                            <img loading="lazy" src={item.icon} alt={item.name} />
                             <p>{item.name}</p>
                         </li>
                     ))}

@@ -25,7 +25,7 @@ const Photos = () => {
                     <ul>
                         {photosLinks.map(({ id, icon, title }) => (
                             <li key={id}>
-                                <img src={icon} alt={title} />
+                                <img loading="lazy" src={icon} alt={title} />
                                 <p>{title}</p>
                             </li>
                         ))}
@@ -50,7 +50,7 @@ const Photos = () => {
                                         })
                                     }
                                 >
-                                    <img src={img} alt={`Gallery Image ${id}`} className="w-full h-full object-cover" />
+                                    <img loading="lazy" src={img} alt={`Gallery Image ${id}`} className="w-full h-full object-cover" />
                                 </button>
                             </li>
                         ))}
