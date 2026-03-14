@@ -34,4 +34,7 @@ async function convert() {
     }
 }
 
-convert().catch(console.error);
+convert().catch(err => {
+    console.error(err);
+    process.exit(1);
+});

@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { memo } from "react";
+import { memo, useEffect, useState } from "react";
 
 import { navIcons, navLinks } from "#constants"
 import useWindowStore from "#store/window"
@@ -8,6 +8,12 @@ import { useTheme } from "#context/ThemeContext"
 const Navbar = memo(() => {
     const { openWindow } = useWindowStore()
     const { theme, toggleTheme } = useTheme()
+    const [now, setNow] = useState(dayjs())
+
+    useEffect(() => {
+        const id = setInterval(() => setNow(dayjs()), 60_000)
+        return () => clearInterval(id)
+    }, [])
 
     return (
         <nav>
@@ -44,9 +50,9 @@ const Navbar = memo(() => {
                     ))}
                 </ul>
 
-                <button 
-                    type="button" 
-                    onClick={toggleTheme} 
+                <button
+                    type="button"
+                    onClick={toggleTheme}
                     className="cursor-pointer"
                     aria-label={theme === "dark" ? "Switch to light theme" : "Switch to dark theme"}
                     aria-pressed={theme === "dark"}
@@ -58,7 +64,7 @@ const Navbar = memo(() => {
                     />
                 </button>
 
-                <time>{dayjs().format("ddd MMM D h:mm A")}</time>
+                <time>{now.format("ddd MMM D h:mm A")}</time>
             </div>
         </nav>
     )

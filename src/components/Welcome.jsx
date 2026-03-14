@@ -45,7 +45,11 @@ const setupTextHover = (container, type) => {
         });
     }
 
-    const handleMouseEnter = () => cachePositions();
+    const handleMouseEnter = () => {
+        cachePositions();
+        window.addEventListener("resize", cachePositions);
+        window.addEventListener("orientationchange", cachePositions);
+    };
 
     const handleMouseMove = (e) => {
         if (!cachedBounds.length) cachePositions(); // Fallback
@@ -63,7 +67,9 @@ const setupTextHover = (container, type) => {
     }
 
     const handleMouseLeave = () => {
-        letters.forEach((letter) => animateLetter(letter, base, 0.3))
+        window.removeEventListener("resize", cachePositions);
+        window.removeEventListener("orientationchange", cachePositions);
+        letters.forEach((letter) => animateLetter(letter, base, 0.3));
     }
 
     container.addEventListener("mouseenter", handleMouseEnter);
@@ -74,6 +80,8 @@ const setupTextHover = (container, type) => {
         container.removeEventListener("mouseenter", handleMouseEnter);
         container.removeEventListener("mousemove", handleMouseMove);
         container.removeEventListener("mouseleave", handleMouseLeave);
+        window.removeEventListener("resize", cachePositions);
+        window.removeEventListener("orientationchange", cachePositions);
     }
 }
 
