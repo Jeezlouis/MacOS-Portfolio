@@ -16,7 +16,7 @@ const Image = () => {
             </div>
 
             <div className='preview'>
-                <img src={data.imageUrl} alt={data.name} />
+                <img loading="lazy" src={data.imageUrl} alt={data.name} />
             </div>
         </>
     )

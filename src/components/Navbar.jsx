@@ -1,10 +1,11 @@
 import dayjs from "dayjs";
+import { memo } from "react";
 
 import { navIcons, navLinks } from "#constants"
 import useWindowStore from "#store/window"
 import { useTheme } from "#context/ThemeContext"
 
-const Navbar = () => {
+const Navbar = memo(() => {
     const { openWindow } = useWindowStore()
     const { theme, toggleTheme } = useTheme()
 
@@ -61,6 +62,6 @@ const Navbar = () => {
             </div>
         </nav>
     )
-}
+})
 
 export default Navbar
